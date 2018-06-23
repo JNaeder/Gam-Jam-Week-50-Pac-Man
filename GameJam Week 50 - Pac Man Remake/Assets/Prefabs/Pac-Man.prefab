@@ -153,6 +153,8 @@ MonoBehaviour:
   ghostDistThreshold: 27
   explosion: {fileID: 1108412349350616, guid: b18854b6005fd451cb827daa9a7ff274, type: 2}
   laserEnd: {fileID: 1459698017243800, guid: 86d5a5872980543e79a0e1700588097c, type: 2}
+  pelletBullet: {fileID: 1556857282190834, guid: f9213392b991e47f0bbf5c18e83f54fa,
+    type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 4294966527

@@ -7,6 +7,8 @@ TagManager:
   - PacDots
   - Ghost
   - GhostTrigger
+  - PelletBullet
+  - EnemyPellet
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - GhostTrigger
   - GhostAttackTrigger
   - Ghost
-  - 
-  - 
+  - PelletBullet
+  - EnemyPellet
   - 
   - 
   - 
