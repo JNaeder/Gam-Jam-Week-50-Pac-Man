@@ -9,6 +9,7 @@ TagManager:
   - GhostTrigger
   - PelletBullet
   - EnemyPellet
+  - Brick
   layers:
   - Default
   - TransparentFX

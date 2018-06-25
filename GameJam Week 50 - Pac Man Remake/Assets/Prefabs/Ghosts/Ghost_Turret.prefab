@@ -548,6 +548,7 @@ MonoBehaviour:
   isTurret: 1
   isGate: 0
   wayPointFolder: {fileID: 0}
+  enemyDieSound: event:/GhostExplosion
   isAttacking: 0
 --- !u!198 &198187334033165642
 ParticleSystem:

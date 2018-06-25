@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{7c5c4f01-82ae-4121-bfd7-a749d1bc7235}">
+        <property name="assetPath">
+            <value>MusicParts/Music_Chords.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>69.818185941043083</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{149f4a2b-9174-4f86-9181-9068672c1058}</destination>
+        </relationship>
+    </object>
+</objects>

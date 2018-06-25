@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Ghost : MonoBehaviour {
 	
@@ -14,6 +15,9 @@ public class Ghost : MonoBehaviour {
 	public GameObject enemyPellet;
 	public bool isFollowPlayer, isTurret, isGate;
 	public Transform wayPointFolder;
+
+    [FMODUnity.EventRef]
+    public string enemyDieSound;
 
 	SpriteRenderer sP, muzzleSP;
 	Color ghostColor;
@@ -42,11 +46,17 @@ public class Ghost : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		startHealthNum = health;
-		healthBarScale = healthBarGreen.localScale;
-		startHealthBarGreenX = healthBarScale.x;
+        if (healthBarGreen != null)
+        {
+            healthBarScale = healthBarGreen.localScale;
+            startHealthBarGreenX = healthBarScale.x;
+        }
 		startShieldNum = shield;
-		shieldBarScale = shieldBarBlue.localScale;
-		startShieldBarBlueX = shieldBarScale.x;
+        if (shieldBarBlue != null)
+        {
+            shieldBarScale = shieldBarBlue.localScale;
+            startShieldBarBlueX = shieldBarScale.x;
+        }
 
 		gM = FindObjectOfType<GameManager>();
 		sP = GetComponent<SpriteRenderer>();
@@ -55,7 +65,9 @@ public class Ghost : MonoBehaviour {
 			muzzleSP = muzzle.GetComponentInParent<SpriteRenderer>();
 		}
 		ghostColor = sP.color;
-		pacMan = FindObjectOfType<PacMan_Controller>();
+
+
+		//pacMan = FindObjectOfType<PacMan_Controller>();
 
 
 		if(wayPointFolder != null){
@@ -92,13 +104,18 @@ public class Ghost : MonoBehaviour {
 
 
 	void UpdateBars(){
-		healthBarPerc = health / startHealthNum;
-        healthBarScale.x = startHealthBarGreenX * healthBarPerc;
-        healthBarGreen.localScale = healthBarScale;
-
-		shieldBarPerc = shield / startShieldNum;
-		shieldBarScale.x = startShieldBarBlueX * shieldBarPerc;
-		shieldBarBlue.localScale = shieldBarScale;
+        if (healthBarGreen != null)
+        {
+            healthBarPerc = health / startHealthNum;
+            healthBarScale.x = startHealthBarGreenX * healthBarPerc;
+            healthBarGreen.localScale = healthBarScale;
+        }
+        if (shieldBarBlue != null)
+        {
+            shieldBarPerc = shield / startShieldNum;
+            shieldBarScale.x = startShieldBarBlueX * shieldBarPerc;
+            shieldBarBlue.localScale = shieldBarScale;
+        }
 
 	}
 
@@ -186,6 +203,7 @@ public class Ghost : MonoBehaviour {
 
 
 	void Death(){
+        FMODUnity.RuntimeManager.PlayOneShot(enemyDieSound, transform.position);
 		GameObject explosionInst = Instantiate(explosion.gameObject, transform.position, Quaternion.identity);
 		ParticleSystem.MainModule explosionPS = explosionInst.GetComponent<ParticleSystem>().main;
 		explosionPS.startColor = Color.blue;
@@ -253,7 +271,14 @@ public class Ghost : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.tag == "Player"){
-			pacMan.Death();
+            pacMan = collision.gameObject.GetComponent<PacMan_Controller>();
+            if (!isBlue)
+            {
+                pacMan.Death();
+            }
+            else {
+                Death();
+            }
 			UnLocked();
 		}
 	}

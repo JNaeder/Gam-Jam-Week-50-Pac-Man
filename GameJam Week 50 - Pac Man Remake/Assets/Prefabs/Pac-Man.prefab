@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5df66f7cfe645f3bea4b940ffc70d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 22
+  speed: 32
   diagSpeedMult: 0.661
-  ghostDistThreshold: 27
+  ghostDistThreshold: 40
   explosion: {fileID: 1108412349350616, guid: b18854b6005fd451cb827daa9a7ff274, type: 2}
   laserEnd: {fileID: 1459698017243800, guid: 86d5a5872980543e79a0e1700588097c, type: 2}
   pelletBullet: {fileID: 1556857282190834, guid: f9213392b991e47f0bbf5c18e83f54fa,
@@ -158,6 +158,11 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294966527
+  ammoCapacity: 30
+  laserCapacity: 15
+  pacMoveSound: event:/PacMove
+  pacShootSound: event:/PacShoot
+  fireLaserSound: event:/LaserSound
 --- !u!120 &120307802833043556
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -199,13 +204,13 @@ LineRenderer:
   - {x: 0, y: 20, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 3
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.26229477
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -226,18 +231,18 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.31510323, g: 0.9150943, b: 0.34139448, a: 1}
-      key1: {r: 0.67769563, g: 0.9600444, b: 0.690068, a: 1}
-      key2: {r: 0.026444681, g: 0.3490566, b: 0.014818435, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.533412, g: 0.5566038, b: 0, a: 1}
+      key1: {r: 0.9502846, g: 1, b: 0, a: 1}
+      key2: {r: 0.9502846, g: 1, b: 0, a: 0}
+      key3: {r: 0.026444681, g: 0.3490566, b: 0.014818435, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 34502
+      ctime1: 65535
       ctime2: 65535
-      ctime3: 0
+      ctime3: 65535
       ctime4: 0
       ctime5: 0
       ctime6: 0
@@ -251,7 +256,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 3
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0

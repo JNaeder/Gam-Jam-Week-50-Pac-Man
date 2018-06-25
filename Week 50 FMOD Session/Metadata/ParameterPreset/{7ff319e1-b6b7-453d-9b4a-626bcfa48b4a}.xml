@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{7ff319e1-b6b7-453d-9b4a-626bcfa48b4a}">
+        <property name="name">
+            <value>isMoving</value>
+        </property>
+        <relationship name="folder">
+            <destination>{065cf98a-768c-41ae-a491-d4f110e46a98}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{81953cfc-d7af-4932-88ef-7229a11ce8c4}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{81953cfc-d7af-4932-88ef-7229a11ce8c4}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

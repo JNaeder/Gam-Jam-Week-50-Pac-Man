@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{3aabb7b2-9085-40d3-be02-c737dcf718e7}">
+        <property name="assetPath">
+            <value>Music_Rough_1.ogg</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>70.818185941043083</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{149f4a2b-9174-4f86-9181-9068672c1058}</destination>
+        </relationship>
+    </object>
+</objects>
