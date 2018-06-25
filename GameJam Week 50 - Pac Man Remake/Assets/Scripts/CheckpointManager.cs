@@ -22,12 +22,6 @@ public class CheckpointManager : MonoBehaviour {
 		
 	}
 
-    public void UpdateCheckpoint() {
-
-
-
-    }
-
 
     public Vector3 GetRespawnPos() {
         Vector3 newSpawnPos = checkpointPos[GameManager.checkpointNum].position;

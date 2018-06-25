@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour {
 
     FMOD.Studio.EventInstance pelletSoundInst;
 
+	FMOD.Studio.EventInstance currentSnapShot;
+
+	[FMODUnity.EventRef]
+	public string[] checkpointSnapshots;
+
     public GameObject pacManPlayer;
 
     public float waitTimeTillNextLevel;
@@ -49,6 +54,10 @@ public class GameManager : MonoBehaviour {
 
         cPM = FindObjectOfType<CheckpointManager>();
         cam = Camera.main;
+
+
+		currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[0]);
+		currentSnapShot.start();
 	}
 	
 	// Update is called once per frame
@@ -138,5 +147,20 @@ public class GameManager : MonoBehaviour {
             
             
         }
+	}
+
+
+
+	public void ChangeFMODSnapShot(int checkpointNum){
+		//Debug.Log("Checkpoint Number is " + checkpointNum);
+		if (checkpointNum <= checkpointSnapshots.Length -1)
+		{
+			currentSnapShot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[checkpointNum]);
+			currentSnapShot.start();
+		}
+
+
+
 	}
 }

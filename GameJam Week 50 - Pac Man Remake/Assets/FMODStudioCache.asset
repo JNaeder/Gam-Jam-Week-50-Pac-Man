@@ -12,18 +12,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114803255944140572}
-  - {fileID: 114043187013725166}
+  - {fileID: 114531225096136530}
+  - {fileID: 114054819088581736}
   EditorEvents:
-  - {fileID: 114240521107228478}
-  - {fileID: 114505440932317684}
-  - {fileID: 114497480489536046}
-  - {fileID: 114034022809634638}
-  - {fileID: 114549089474739012}
-  - {fileID: 114454771810988944}
-  MasterBankRef: {fileID: 114043187013725166}
-  StringsBankRef: {fileID: 114803255944140572}
-  stringsBankWriteTime: 636654662841794164
+  - {fileID: 114811767304939486}
+  - {fileID: 114240425670751504}
+  - {fileID: 114916130710872412}
+  - {fileID: 114830920086358790}
+  - {fileID: 114354665709558482}
+  - {fileID: 114418256104630030}
+  - {fileID: 114475144942614168}
+  - {fileID: 114303511428347244}
+  - {fileID: 114253756744720284}
+  - {fileID: 114988330037112050}
+  MasterBankRef: {fileID: 114054819088581736}
+  StringsBankRef: {fileID: 114531225096136530}
+  stringsBankWriteTime: 636655328470000000
   cacheVersion: 2
 --- !u!114 &114009403320878578
 MonoBehaviour:
@@ -96,6 +100,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 4097760
   Exists: 1
+--- !u!114 &114046134891169780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114047541722601132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +145,40 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114054776062218398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114054819088581736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week 50 FMOD Session/Build/Desktop/Master
+    Bank.bank
+  lastModified: 636655328470000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4098944
+  Exists: 1
 --- !u!114 &114058981721092860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +195,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114074432454430758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114077022094903094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -201,6 +269,21 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114113969442428606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
 --- !u!114 &114119315472457064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +315,21 @@ MonoBehaviour:
   Max: 10
   Default: 0
 --- !u!114 &114139400144002670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &114148216335072086
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -351,6 +449,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114240425670751504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 3fbb06c13279e94480ec1b1479eebc18
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114113969442428606}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 129565
 --- !u!114 &114240521107228478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +510,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114242563215556924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
 --- !u!114 &114250866115361050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +540,28 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114253756744720284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Full
+  guid: b94a413a4313614a9bbe84de69bdf38b
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114256914267602334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +637,28 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114303511428347244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Checkpoint 0
+  guid: b706aee3dc050c4bacea49a98b8cc176
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114311366639191802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +673,21 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114326520533063512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114338235182710728
 MonoBehaviour:
@@ -509,6 +704,28 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114354665709558482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/GhostExplosion
+  guid: b526f11b2dffa845b6c3195510c915c7
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1210
 --- !u!114 &114360076834734036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,6 +740,36 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114361640491662188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114401418208562816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114405370633713048
 MonoBehaviour:
@@ -539,6 +786,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114418256104630030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/GetPellet
+  guid: de62bee44e8c8540af405edf96a4d727
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 793
 --- !u!114 &114418652911789376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +824,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114422527466399976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114448732790848950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -607,6 +891,28 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114475144942614168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Checkpoint 1
+  guid: 2d50a9cfaece3a41a4dedc24443734c3
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114487441860192734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +967,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8000
+--- !u!114 &114498204686646904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
 --- !u!114 &114500654398233996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +1050,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114522312621638214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
 --- !u!114 &114523129647400882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,6 +1080,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114531225096136530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week 50 FMOD Session/Build/Desktop/Master
+    Bank.strings.bank
+  lastModified: 636655328470000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1166
+  Exists: 1
 --- !u!114 &114535562684805522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +1210,21 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114594664682475852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114598816168079408
 MonoBehaviour:
@@ -976,6 +1346,21 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114682169824549284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114725227364956894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,6 +1375,51 @@ MonoBehaviour:
   Name: isMoving
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114735031747680544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114743219083122178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
+  Default: 0
+--- !u!114 &114745888633055092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
   Default: 0
 --- !u!114 &114750701767244462
 MonoBehaviour:
@@ -1021,6 +1451,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114754413388722190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114767059935576110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1480,21 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114771455636094164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114777937442269608
 MonoBehaviour:
@@ -1115,6 +1575,29 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114811767304939486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/PacMove
+  guid: 32c98261fe387c44ae8716cfa2070ee3
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114754413388722190}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114828085680778440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,6 +1613,28 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114830920086358790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/PacShoot
+  guid: 67d07ba443e1cf41812f21eb5bfbebfe
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1062
 --- !u!114 &114834243921312606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1664,21 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114844653428341400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114851500011398866
 MonoBehaviour:
@@ -1204,6 +1724,21 @@ MonoBehaviour:
   Name: isShootingLaser
   Min: 0
   Max: 2
+  Default: 0
+--- !u!114 &114872194242205386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114881197068529988
 MonoBehaviour:
@@ -1265,6 +1800,44 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114914594691618724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &114916130710872412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/LaserSound
+  guid: 57b6b2f2efd0e14c9e0b26804af4cccb
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114148216335072086}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114941604003136446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1279,6 +1852,21 @@ MonoBehaviour:
   Name: Checkpoint
   Min: 0
   Max: 10
+  Default: 0
+--- !u!114 &114945985509619668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114982584558118458
 MonoBehaviour:
@@ -1295,3 +1883,25 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114988330037112050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Empty
+  guid: 34f8466d848e2e478056b8d5949a9b37
+  Banks:
+  - {fileID: 114054819088581736}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

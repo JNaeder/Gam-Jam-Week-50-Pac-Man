@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\John\Documents\GitHub\Gam-Jam-Week-50-Pac-Man\Week 50
-    FMOD Session\Week 50 FMOD Session.fspro
-  SourceProjectPathUnformatted: C:\Users\John\Documents\GitHub\Gam-Jam-Week-50-Pac-Man\Week
-    50 FMOD Session\Week 50 FMOD Session.fspro
-  SourceBankPathUnformatted: C:\Users\John\Documents\GitHub\Gam-Jam-Week-50-Pac-Man\Week
-    50 FMOD Session\Build
+  sourceProjectPath: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week 50
+    FMOD Session/Week 50 FMOD Session.fspro
+  SourceProjectPathUnformatted: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week
+    50 FMOD Session/Week 50 FMOD Session.fspro
+  SourceBankPathUnformatted: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week
+    50 FMOD Session/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
