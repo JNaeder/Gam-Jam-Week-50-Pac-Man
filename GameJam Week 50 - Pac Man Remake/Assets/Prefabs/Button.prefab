@@ -146,9 +146,14 @@ MonoBehaviour:
   buttonTop: {fileID: 4923389766563630}
   doesChangeCamEffects: 1
   doesChangeOutlineColor: 0
+  doesChangeToOneColor: 0
+  doesExplode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  explosion: {fileID: 1108412349350616, guid: b18854b6005fd451cb827daa9a7ff274, type: 2}
   thingsToDisable: []
   thingsToEnable: []
   pressButtonSound: event:/PressSwitch
+  explosionSound: event:/GhostExplosion
 --- !u!114 &114134327736454190
 MonoBehaviour:
   m_ObjectHideFlags: 1

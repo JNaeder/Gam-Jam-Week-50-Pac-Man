@@ -28,6 +28,10 @@ public class PacMan_Controller : MonoBehaviour {
 
 	float lockedGhostDist;
 
+	public float h;
+	public float v;
+	public bool isPaused;
+
     //[HideInInspector]
     public bool laserEnabled;
 
@@ -66,16 +70,21 @@ public class PacMan_Controller : MonoBehaviour {
 
 		startSpeed = speed;
 		startLaserCapacity = laserCapacity;
+		laserCapacity = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        pacMoveInst.setParameterValue("isMoving", isMovingNum);
+		if(!isPaused){
+			pacMoveInst.setParameterValue("isMoving", isMovingNum);
+		} else {
+			pacMoveInst.setParameterValue("isMoving", 0);
+		}
+        
         fireLaserInst.setParameterValue("isShootingLaser", isFiringLaserNum);
         anim.SetBool("isShootingLaser", lasershooting);
 
 		Movement();
-		WeaponSwitching();
 		UpdateBars();
 
 		if (isUsingLaser)
@@ -84,10 +93,6 @@ public class PacMan_Controller : MonoBehaviour {
             {
                 ShootingLaser();
             }
-		}
-		else
-		{
-			ShootingPellet();
 		}
 	}
 
@@ -107,10 +112,15 @@ public class PacMan_Controller : MonoBehaviour {
 
 
 	void Movement(){
-		float h = Input.GetAxisRaw("Horizontal");
-		float v = Input.GetAxisRaw("Vertical");
+		h = Input.GetAxisRaw("Horizontal");
+		v = Input.GetAxisRaw("Vertical");
+		if (!isPaused)
+		{
+			anim.SetFloat("speed", (Mathf.Abs(h)) + (Mathf.Abs(v)));
+		} else {
+			anim.SetFloat("speed", 0);
 
-        anim.SetFloat("speed", (Mathf.Abs(h)) + (Mathf.Abs(v)));
+		}
 
 		transform.position += new Vector3(h, v, 0) * Time.deltaTime * speed;
 
@@ -299,7 +309,10 @@ public class PacMan_Controller : MonoBehaviour {
                     isFiringLaserNum = 0;
                     if (laserCapacity < startLaserCapacity)
 					{
-						laserCapacity += Time.deltaTime * 2;
+						if (laserEnabled)
+						{
+							laserCapacity += Time.deltaTime * 2;
+						}
 					}
 					hasLockedOnToGhost = false;
 					lineRend.enabled = false;
@@ -316,7 +329,10 @@ public class PacMan_Controller : MonoBehaviour {
             isFiringLaserNum = 0;
             if (laserCapacity < startLaserCapacity)
 			{
-				laserCapacity += Time.deltaTime * 2;
+				if (laserEnabled)
+                {
+                    laserCapacity += Time.deltaTime * 2;
+                }
 			}
 			hasLockedOnToGhost = false;
 			lineRend.enabled = false;
@@ -375,16 +391,7 @@ public class PacMan_Controller : MonoBehaviour {
 	}
 
 
-	void WeaponSwitching(){
-		if(Input.GetButtonDown("WeaponSwitch")){
-			//Debug.Log("Switch Weapon");
 
-			isUsingLaser = !isUsingLaser;
-			gM.SetActiveWeaponButton(isUsingLaser);
-		}
-
-
-	}
 
 	void UpdateBars(){
 		laserPerc = laserCapacity / startLaserCapacity;

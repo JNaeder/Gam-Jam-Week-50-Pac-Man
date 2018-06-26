@@ -8,8 +8,8 @@ using FMODUnity;
 public class GameManager : MonoBehaviour {
 
 
-	public Text ammoNumber, scoreNumber;
-	public Image laserCapacityGreen, laserButton, pelletGunButton;
+	public Text scoreNumber;
+	public Image laserCapacityGreen;
 	public Image life1, life2, life3;
 
     [FMODUnity.EventRef]
@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		laserButton.color = buttonHightlightColor;
-        pelletGunButton.color = Color.white;
 
         cPM = FindObjectOfType<CheckpointManager>();
         cam = Camera.main;
@@ -66,7 +64,6 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ammoNumber.text = ammo.ToString() + "/30";
 		scoreNumber.text = score.ToString();
 		WaitToLoadNewScene();
 
@@ -114,17 +111,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	public void SetActiveWeaponButton(bool usingLaser){
-		if(usingLaser){
-			laserButton.color = buttonHightlightColor;
-			pelletGunButton.color = Color.white;
-		} else {
-			laserButton.color = Color.white;
-			pelletGunButton.color = buttonHightlightColor;
 
-		}
-
-	}
 
 
 	public void PlayerDeath(){

@@ -9,14 +9,15 @@ public class Button : MonoBehaviour {
     public PostProcessingProfile camEffect;
     public WallColorChange outlineColorChange;
     public Transform door, buttonTop;
-    public bool doesChangeCamEffects, doesChangeOutlineColor, doesChangeToOneColor;
+    public bool doesChangeCamEffects, doesChangeOutlineColor, doesChangeToOneColor, doesExplode;
     public Color outlineColor;
+	public GameObject explosion;
 
     public GameObject[] thingsToDisable;
     public GameObject[] thingsToEnable;
 
-    [FMODUnity.EventRef]
-    public string pressButtonSound;
+	[FMODUnity.EventRef]
+	public string pressButtonSound, explosionSound;
 
 
     PacMan_Controller pacMan;
@@ -70,6 +71,9 @@ public class Button : MonoBehaviour {
 
 
     void LowerButton() {
+		hasBeenPressed = true;
+
+
         if (doesChangeCamEffects) {
             pPB.profile = camEffect;
 
@@ -85,10 +89,23 @@ public class Button : MonoBehaviour {
 
         }
 
+		if (buttonTop != null)
+		{
+			Vector3 newTrans = new Vector3(0, -1.2f, 0);
+			buttonTop.localPosition = newTrans;
 
-        Vector3 newTrans = new Vector3(0, -1.2f, 0);
-        buttonTop.localPosition = newTrans;
-        hasBeenPressed = true;
+		}
+
+		if(doesExplode){
+			GameObject buttonExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
+			FMODUnity.RuntimeManager.PlayOneShot(explosionSound, transform.position);
+
+			Destroy(gameObject);
+			Destroy(buttonExplosion, 2f);
+            
+
+
+		}
 
     }
 
