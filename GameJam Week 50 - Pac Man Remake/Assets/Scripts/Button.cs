@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using FMODUnity;
 
 public class Button : MonoBehaviour {
     public bool opensDoor, addsLaser;
     public PostProcessingProfile camEffect;
     public WallColorChange outlineColorChange;
     public Transform door, buttonTop;
-    public bool doesChangeCamEffects, doesChangeOutlineColor;
+    public bool doesChangeCamEffects, doesChangeOutlineColor, doesChangeToOneColor;
+    public Color outlineColor;
 
     public GameObject[] thingsToDisable;
     public GameObject[] thingsToEnable;
+
+    [FMODUnity.EventRef]
+    public string pressButtonSound;
 
 
     PacMan_Controller pacMan;
@@ -35,9 +40,11 @@ public class Button : MonoBehaviour {
             pacMan = collision.gameObject.GetComponent<PacMan_Controller>();
             
             if (!hasBeenPressed) {
+                FMODUnity.RuntimeManager.PlayOneShot(pressButtonSound, transform.position);
                 if (opensDoor) {
                     if (door != null)
                     {
+                        
                         Destroy(door.gameObject);
                     }
 
@@ -70,6 +77,12 @@ public class Button : MonoBehaviour {
 
         if (doesChangeOutlineColor) {
             outlineColorChange.enabled = true;
+        }
+
+        if (doesChangeToOneColor) {
+            outlineColorChange.enabled = true;
+            outlineColorChange.SetToOneColor(outlineColor);
+
         }
 
 

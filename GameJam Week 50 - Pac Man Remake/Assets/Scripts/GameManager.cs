@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour {
     [FMODUnity.EventRef]
     public string getPelletSound, pacManDeathSound;
 
-    FMOD.Studio.EventInstance pelletSoundInst;
-
 	FMOD.Studio.EventInstance currentSnapShot;
 
 	[FMODUnity.EventRef]
@@ -37,11 +35,15 @@ public class GameManager : MonoBehaviour {
 
 	public static int lives = 3;
 
+    public static PacMan_Controller pacMan;
 
 	public int pelletPoints;
 	public int killEnemyPoints;
 
 	public Color buttonHightlightColor;
+
+
+    int PelletScaleNum = 0;
 
     CheckpointManager cPM;
     Camera cam;
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour {
 
 		currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[0]);
 		currentSnapShot.start();
+
+        pacMan = FindObjectOfType<PacMan_Controller>();
 	}
 	
 	// Update is called once per frame
@@ -82,7 +86,7 @@ public class GameManager : MonoBehaviour {
 			life1.enabled = false;
             life2.enabled = false;
             life3.enabled = false;
-			Debug.Log("Game Over");
+			
 		}
 	}
 
@@ -90,10 +94,7 @@ public class GameManager : MonoBehaviour {
 
 	public void SetPelletScore(){
 		score += pelletPoints;
-        pelletSoundInst = FMODUnity.RuntimeManager.CreateInstance(getPelletSound);
-        pelletSoundInst.setParameterValue("Checkpoint", checkpointNum);
-        pelletSoundInst.start();
-        pelletSoundInst.release();
+        FMODUnity.RuntimeManager.PlayOneShot(getPelletSound, transform.position);
 
 
 	}
@@ -128,6 +129,10 @@ public class GameManager : MonoBehaviour {
 
 	public void PlayerDeath(){
 		lives--;
+        if (lives <= 0) {
+           checkpointNum = 10;
+
+        }
 		newTime = Time.time;
         FMODUnity.RuntimeManager.PlayOneShot(pacManDeathSound);
 
@@ -140,10 +145,18 @@ public class GameManager : MonoBehaviour {
         {
             //Respawn Function
             newTime = Mathf.Infinity;
-            Vector3 spawnPos = cPM.GetRespawnPos();
-            GameObject newPacMan = Instantiate(pacManPlayer, spawnPos, Quaternion.identity);
-            camFollow = cam.GetComponent<CameraFollow>();
-            camFollow.target = newPacMan.transform;
+            if (lives > 0)
+            {
+                Vector3 spawnPos = cPM.GetRespawnPos();
+                GameObject newPacMan = Instantiate(pacManPlayer, spawnPos, Quaternion.identity);
+                pacMan = newPacMan.GetComponent<PacMan_Controller>();
+                camFollow = cam.GetComponent<CameraFollow>();
+                camFollow.target = newPacMan.transform;
+            }
+            else {
+                Debug.LogWarning("Game Over!");
+
+            }
             
             
         }

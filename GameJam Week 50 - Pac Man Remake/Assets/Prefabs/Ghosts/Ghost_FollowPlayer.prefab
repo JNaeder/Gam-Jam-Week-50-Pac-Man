@@ -478,6 +478,7 @@ MonoBehaviour:
   isGate: 0
   wayPointFolder: {fileID: 0}
   enemyDieSound: event:/GhostExplosion
+  ghostTurnBlueSound: event:/GhostTurnBlue
   isAttacking: 0
 --- !u!114 &114899435394171328
 MonoBehaviour:

@@ -10,6 +10,8 @@ public class WallColorChange : MonoBehaviour {
     public float hueValue;
     public float colorSpeedChange;
 
+    bool isChangingColorFast = true;
+
     // Use this for initialization
     void Start() {
         outlineGrid = GetComponent<Tilemap>();
@@ -22,15 +24,33 @@ public class WallColorChange : MonoBehaviour {
     }
 
     void ChangeColor() {
-        if (hueValue > 1) {
-            hueValue = 0;
-        }
-        else
+        if (isChangingColorFast)
         {
-            hueValue += colorSpeedChange * Time.deltaTime * 0.1f;
+
+
+            if (hueValue > 1)
+            {
+                hueValue = 0;
+            }
+            else
+            {
+                hueValue += colorSpeedChange * Time.deltaTime * 0.1f;
+            }
+            outlineColor = Color.HSVToRGB(hueValue, 1, 1);
+            outlineGrid.color = outlineColor;
         }
-        outlineColor = Color.HSVToRGB(hueValue, 1, 1);
-        outlineGrid.color = outlineColor;
+        else {
+
+
+        }
+
+    }
+
+
+
+    public void SetToOneColor(Color newColor) {
+        isChangingColorFast = false;
+        outlineGrid.color = newColor;
 
     }
 }

@@ -23,9 +23,17 @@ public class CheckpointManager : MonoBehaviour {
 	}
 
 
-    public Vector3 GetRespawnPos() {
-        Vector3 newSpawnPos = checkpointPos[GameManager.checkpointNum].position;
-        return newSpawnPos;
+    public Vector3 GetRespawnPos()
+    {
+        if (GameManager.checkpointNum < 20)
+        {
+            Vector3 newSpawnPos = checkpointPos[GameManager.checkpointNum].position;
+            return newSpawnPos;
 
+        }
+        else
+        {
+            return Vector3.zero;
+        }
     }
 }

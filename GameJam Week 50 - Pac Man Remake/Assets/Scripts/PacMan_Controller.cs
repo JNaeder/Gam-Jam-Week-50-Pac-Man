@@ -96,12 +96,8 @@ public class PacMan_Controller : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "PacDots"){
-			//Debug.Log("Got Dot!");
-			if (gM.ammo < ammoCapacity)
-			{
-				gM.ammo++;
-				gM.SetPelletScore();
-			}
+            //Debug.Log("Got Dot!");
+            gM.SetPelletScore();
 			Destroy(collision.gameObject);
 
 		}

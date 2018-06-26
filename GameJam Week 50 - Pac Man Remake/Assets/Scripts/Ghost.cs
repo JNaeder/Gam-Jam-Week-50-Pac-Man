@@ -17,7 +17,7 @@ public class Ghost : MonoBehaviour {
 	public Transform wayPointFolder;
 
     [FMODUnity.EventRef]
-    public string enemyDieSound;
+    public string enemyDieSound, ghostTurnBlueSound;
 
 	SpriteRenderer sP, muzzleSP;
 	Color ghostColor;
@@ -67,7 +67,7 @@ public class Ghost : MonoBehaviour {
 		ghostColor = sP.color;
 
 
-		//pacMan = FindObjectOfType<PacMan_Controller>();
+        pacMan = GameManager.pacMan;
 
 
 		if(wayPointFolder != null){
@@ -84,7 +84,11 @@ public class Ghost : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		UpdateBars();      
+
+        pacMan = GameManager.pacMan;
+
+
+        UpdateBars();      
 		ShieldRegenerate();
 		CheckHealth();
 
@@ -186,6 +190,9 @@ public class Ghost : MonoBehaviour {
 
 	void CheckHealth(){
 		if(shield <= 0){
+            if (!isBlue) {
+                FMODUnity.RuntimeManager.PlayOneShot(ghostTurnBlueSound);
+            }
 			isBlue = true;
 			sP.color = Color.blue;
 			if (muzzle != null)
@@ -216,6 +223,7 @@ public class Ghost : MonoBehaviour {
 	void AttackingFollowPlayer(){
 
 		if(isAttacking){
+            //Debug.Log("Is Attacking " + pacMan.gameObject.name);
 			if (pacMan != null)
 			{
 				if (isFollowPlayer)
@@ -223,6 +231,7 @@ public class Ghost : MonoBehaviour {
 					//transform.LookAt(pacMan.transform);
 					transform.position = Vector3.MoveTowards(transform.position, pacMan.transform.position, speed * Time.deltaTime);
 				}
+                
 			}
 		}
 

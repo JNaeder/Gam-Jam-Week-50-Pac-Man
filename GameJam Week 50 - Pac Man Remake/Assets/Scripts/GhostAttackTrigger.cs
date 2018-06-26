@@ -24,6 +24,7 @@ public class GhostAttackTrigger : MonoBehaviour {
 		{
 			ghost.isAttacking = true;
 			Destroy(gameObject);
+           // Debug.Log(ghost.name + " attack state is " + ghost.isAttacking);
 		}
 	}
 }

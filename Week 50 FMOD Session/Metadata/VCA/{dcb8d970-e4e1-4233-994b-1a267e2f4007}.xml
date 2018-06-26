@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="MixerVCA" id="{dcb8d970-e4e1-4233-994b-1a267e2f4007}">
+        <property name="name">
+            <value>PelletSound</value>
+        </property>
+        <relationship name="mixer">
+            <destination>{4848fba9-cd59-47fb-9b2b-722870609579}</destination>
+        </relationship>
+    </object>
+</objects>
