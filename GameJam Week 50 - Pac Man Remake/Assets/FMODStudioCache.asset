@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114531225096136530}
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   EditorEvents:
   - {fileID: 114811767304939486}
   - {fileID: 114240425670751504}
@@ -28,9 +28,9 @@ MonoBehaviour:
   - {fileID: 114436469832517958}
   - {fileID: 114272522004705146}
   - {fileID: 114976186468964424}
-  MasterBankRef: {fileID: 114670492660224226}
+  MasterBankRef: {fileID: 114797135854572132}
   StringsBankRef: {fileID: 114531225096136530}
-  stringsBankWriteTime: 636656306450000000
+  stringsBankWriteTime: 636656364896870443
   cacheVersion: 2
 --- !u!114 &114009403320878578
 MonoBehaviour:
@@ -452,6 +452,21 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114088277260134116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114095884161530382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,7 +886,7 @@ MonoBehaviour:
   Path: snapshot:/Full
   guid: b94a413a4313614a9bbe84de69bdf38b
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -938,12 +953,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: 3fbb06c13279e94480ec1b1479eebc18
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114762731057192418}
+  - {fileID: 114757380438507760}
   MinDistance: 0
   MaxDistance: 0
   Length: 135565
@@ -1111,7 +1126,7 @@ MonoBehaviour:
   Path: event:/PowerOn
   guid: 1e1da0afb176dc45a7999dc8265f23bd
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1395,7 +1410,7 @@ MonoBehaviour:
   Path: event:/GhostExplosion
   guid: b526f11b2dffa845b6c3195510c915c7
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1567,7 +1582,7 @@ MonoBehaviour:
   Path: event:/GetPellet
   guid: de62bee44e8c8540af405edf96a4d727
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1679,7 +1694,7 @@ MonoBehaviour:
   Path: event:/GhostTurnBlue
   guid: 12f4681d2e663545bd0b67dca46e36b7
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1970,7 +1985,7 @@ MonoBehaviour:
   Path: event:/Empty
   guid: 34f8466d848e2e478056b8d5949a9b37
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2201,9 +2216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week 50 FMOD Session/Build/Desktop/Master
+  Path: /Users/John/Documents/GitHub/Gam-Jam-Week-50-Pac-Man/Week 50 FMOD Session\Build\Desktop\Master
     Bank.strings.bank
-  lastModified: 636656306450000000
+  lastModified: 636656364896870443
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2748,7 +2763,7 @@ MonoBehaviour:
   Path: snapshot:/Checkpoint 0
   guid: b706aee3dc050c4bacea49a98b8cc176
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2981,6 +2996,21 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114750241294034448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: isShootingLaser
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114750701767244462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,6 +3055,21 @@ MonoBehaviour:
   Name: isMoving
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114757380438507760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Checkpoint
+  Min: 0
+  Max: 10
   Default: 0
 --- !u!114 &114761824219937708
 MonoBehaviour:
@@ -3161,6 +3206,25 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 0
+--- !u!114 &114797135854572132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\John\Documents\GitHub\Gam-Jam-Week-50-Pac-Man\Week 50 FMOD Session\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636656364896753073
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4140576
+  Exists: 1
 --- !u!114 &114800097029108760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3239,12 +3303,12 @@ MonoBehaviour:
   Path: event:/PacMove
   guid: 32c98261fe387c44ae8716cfa2070ee3
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114768861125816690}
+  - {fileID: 114088277260134116}
   MinDistance: 0
   MaxDistance: 0
   Length: 8000
@@ -3292,7 +3356,7 @@ MonoBehaviour:
   Path: event:/PacShoot
   guid: 67d07ba443e1cf41812f21eb5bfbebfe
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3479,7 +3543,7 @@ MonoBehaviour:
   Path: snapshot:/Checkpoint 1
   guid: 2d50a9cfaece3a41a4dedc24443734c3
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -3621,12 +3685,12 @@ MonoBehaviour:
   Path: event:/LaserSound
   guid: 57b6b2f2efd0e14c9e0b26804af4cccb
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114990495423750822}
+  - {fileID: 114750241294034448}
   MinDistance: 0
   MaxDistance: 0
   Length: 8000
@@ -3756,7 +3820,7 @@ MonoBehaviour:
   Path: event:/PressSwitch
   guid: 71fa37f3c86d51438ec13ad42c8b144e
   Banks:
-  - {fileID: 114670492660224226}
+  - {fileID: 114797135854572132}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
