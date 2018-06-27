@@ -69,7 +69,7 @@
             <value>highGain</value>
         </property>
         <property name="value">
-            <value>-16</value>
+            <value>-24.5</value>
         </property>
         <relationship name="automatableObject">
             <destination>{fb77d58b-2bf9-4c3e-ac9c-97a2f8d029a4}</destination>
@@ -102,7 +102,7 @@
             <value>volume</value>
         </property>
         <property name="value">
-            <value>0.800000012</value>
+            <value>-3.60000014</value>
         </property>
         <relationship name="automatableObject">
             <destination>{0e18bd0c-d09b-4231-9762-77c15c57533b}</destination>
@@ -157,7 +157,7 @@
             <value>lowGain</value>
         </property>
         <property name="value">
-            <value>-17</value>
+            <value>-24.5</value>
         </property>
         <relationship name="automatableObject">
             <destination>{fb77d58b-2bf9-4c3e-ac9c-97a2f8d029a4}</destination>

@@ -10,6 +10,7 @@ TagManager:
   - PelletBullet
   - EnemyPellet
   - Brick
+  - Cherry
   layers:
   - Default
   - TransparentFX

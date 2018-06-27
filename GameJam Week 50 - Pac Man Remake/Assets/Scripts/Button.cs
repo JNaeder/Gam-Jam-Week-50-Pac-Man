@@ -72,6 +72,16 @@ public class Button : MonoBehaviour {
 
     void LowerButton() {
 		hasBeenPressed = true;
+		if (buttonTop != null)
+		{
+			ColorChangeSpriteRend topButtonColorChange = buttonTop.GetComponent<ColorChangeSpriteRend>();
+
+			if (topButtonColorChange != null)
+			{
+				topButtonColorChange.enabled = false;
+
+			}
+		}
 
 
         if (doesChangeCamEffects) {

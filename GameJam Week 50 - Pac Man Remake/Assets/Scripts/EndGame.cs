@@ -6,11 +6,11 @@ public class EndGame : MonoBehaviour {
 
 	public GameObject[] ghosts;
 	int amountAlive;
-    
+	GameManager gM;
 
 	// Use this for initialization
 	void Start () {
-		
+		gM = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class EndGame : MonoBehaviour {
 		}
 		if(amountAlive == 0){
 			Debug.Log("Win!!");
-
+			gM.WinGame();
 		}
 
 	}

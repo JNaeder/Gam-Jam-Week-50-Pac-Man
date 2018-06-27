@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: Colorful
+  m_Name: StartScreen
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       method: 0
       fxaaSettings:
@@ -79,9 +79,9 @@ MonoBehaviour:
   motionBlur:
     m_Enabled: 0
     m_Settings:
-      shutterAngle: 270
+      shutterAngle: 260
       sampleCount: 10
-      frameBlending: 0
+      frameBlending: 1
   eyeAdaptation:
     m_Enabled: 0
     m_Settings:
@@ -97,13 +97,13 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.45
+        intensity: 0.5
         threshold: 1.1
         softKnee: 0.5
-        radius: 6.76
+        radius: 4
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
         temperature: 0
         tint: 0
         hueShift: 0
-        saturation: 1.41
+        saturation: 0.39
         contrast: 1
       channelMixer:
         red: {x: 1, y: 0, z: 0}
@@ -310,21 +310,21 @@ MonoBehaviour:
       spectralTexture: {fileID: 0}
       intensity: 0.1
   grain:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      colored: 1
-      intensity: 0.5
-      size: 1
+      colored: 0
+      intensity: 0.724
+      size: 0.71
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
-      smoothness: 0.2
-      roundness: 1
+      intensity: 0.62
+      smoothness: 1
+      roundness: 0.566
       mask: {fileID: 0}
       opacity: 1
       rounded: 0

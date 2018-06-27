@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
 
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour {
 
     public float waitTimeTillNextLevel;
 	float newTime = 999999999999;
+
+
+
+	public GameObject winScreen, loseScreen;
 
 
 	[HideInInspector]
@@ -48,13 +53,14 @@ public class GameManager : MonoBehaviour {
     CheckpointManager cPM;
     Camera cam;
     CameraFollow camFollow;
+	EventSystem eS;
 
 	// Use this for initialization
 	void Start () {
 
         cPM = FindObjectOfType<CheckpointManager>();
         cam = Camera.main;
-
+		eS = FindObjectOfType<EventSystem>();
 
 		currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[0]);
 		currentSnapShot.start();
@@ -95,6 +101,13 @@ public class GameManager : MonoBehaviour {
 
 
 	}
+	public void SetCherryScore()
+    {
+		score += 1000;
+        FMODUnity.RuntimeManager.PlayOneShot(getPelletSound, transform.position);
+
+
+    }
 
 	public void SetEnemyScore(){
 		score += killEnemyPoints;
@@ -118,7 +131,7 @@ public class GameManager : MonoBehaviour {
 		lives--;
         if (lives <= 0) {
            checkpointNum = 10;
-
+			LoseScreen();
         }
 		newTime = Time.time;
         FMODUnity.RuntimeManager.PlayOneShot(pacManDeathSound);
@@ -162,5 +175,17 @@ public class GameManager : MonoBehaviour {
 
 
 
+	}
+
+
+	public void WinGame(){
+		winScreen.SetActive(true);
+		pacMan.isPaused = true;
+	}
+
+	public void LoseScreen(){
+
+		loseScreen.SetActive(true);
+		pacMan.isPaused = true;
 	}
 }

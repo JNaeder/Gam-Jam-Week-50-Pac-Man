@@ -105,6 +105,10 @@ public class PacMan_Controller : MonoBehaviour {
             gM.SetPelletScore();
 			Destroy(collision.gameObject);
 
+		} else if(collision.gameObject.tag == "Cherry"){
+			gM.SetCherryScore();
+            Destroy(collision.gameObject);
+
 		}
 	}
 
