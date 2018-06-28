@@ -10,7 +10,7 @@ public class MusicScript : MonoBehaviour {
 
     FMOD.Studio.EventInstance musicInst;
 
-    public static MusicScript musicScriptInst;
+    public  MusicScript musicScriptInst;
 
 
     private void Awake()
@@ -26,7 +26,7 @@ public class MusicScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         musicInst = FMODUnity.RuntimeManager.CreateInstance(musicSound);
         musicInst.start();
@@ -36,4 +36,10 @@ public class MusicScript : MonoBehaviour {
 	void Update () {
         musicInst.setParameterValue("Checkpoint", GameManager.checkpointNum);
 	}
+
+
+    public void StopMusic() {
+        musicInst.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+    }
 }

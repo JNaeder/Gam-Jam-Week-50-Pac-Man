@@ -38,9 +38,16 @@ public class PauseScript : MonoBehaviour {
         {
             Time.timeScale = 1;
             //Debug.Log("Unpause");
-            pacMan.isPaused = false;
+            if (pacMan != null)
+            {
+                pacMan.isPaused = false;
+            }
+
             //pacMan.enabled = true;
-            pauseScreen.SetActive(false);
+            if (pauseScreen != null)
+            {
+                pauseScreen.SetActive(false);
+            }
         }
 	}
 
@@ -49,7 +56,7 @@ public class PauseScript : MonoBehaviour {
     {
         isPaused = false;
         Time.timeScale = 1;
-        //Debug.Log("Unpause");
+       // Debug.Log("Unpause");
         pacMan.isPaused = false;
         //pacMan.enabled = true;
         pauseScreen.SetActive(false);

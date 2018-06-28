@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class LevelManager : MonoBehaviour {
-
+    MusicScript mS;
 
 
 	// Use this for initialization
 	void Start () {
-		
+        mS = FindObjectOfType<MusicScript>();
 	}
 	
 	// Update is called once per frame
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void BackToMainMenu(){
 		SceneManager.LoadScene(0);
-
+        mS.StopMusic();
 
 	}
 

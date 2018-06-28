@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour {
     Camera cam;
     CameraFollow camFollow;
 	EventSystem eS;
+    MusicScript mS;
 
 	// Use this for initialization
 	void Start () {
@@ -61,36 +62,51 @@ public class GameManager : MonoBehaviour {
         cPM = FindObjectOfType<CheckpointManager>();
         cam = Camera.main;
 		eS = FindObjectOfType<EventSystem>();
-
-		currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[0]);
-		currentSnapShot.start();
+        if (checkpointSnapshots.Length != 0)
+        {
+            currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[0]);
+            currentSnapShot.start();
+        }
 
         pacMan = FindObjectOfType<PacMan_Controller>();
+        mS = FindObjectOfType<MusicScript>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		scoreNumber.text = score.ToString();
+        if (scoreNumber != null)
+        {
+            scoreNumber.text = score.ToString();
+        }
 		WaitToLoadNewScene();
+        if (life1 != null)
+        {
+            if (lives == 3)
+            {
+                life1.enabled = true;
+                life2.enabled = true;
+                life3.enabled = true;
+            }
+            else if (lives == 2)
+            {
+                life1.enabled = true;
+                life2.enabled = true;
+                life3.enabled = false;
+            }
+            else if (lives == 1)
+            {
+                life1.enabled = true;
+                life2.enabled = false;
+                life3.enabled = false;
+            }
+            else if (lives == 0)
+            {
+                life1.enabled = false;
+                life2.enabled = false;
+                life3.enabled = false;
 
-		if(lives == 3){
-			life1.enabled = true;
-			life2.enabled = true;
-			life3.enabled = true;
-		} else if(lives == 2){
-			life1.enabled = true;
-            life2.enabled = true;
-            life3.enabled = false;
-		} else if(lives == 1){
-			life1.enabled = true;
-            life2.enabled = false;
-            life3.enabled = false;
-		} else if(lives == 0){
-			life1.enabled = false;
-            life2.enabled = false;
-            life3.enabled = false;
-			
-		}
+            }
+        }
 	}
 
 
@@ -168,6 +184,7 @@ public class GameManager : MonoBehaviour {
 		//Debug.Log("Checkpoint Number is " + checkpointNum);
 		if (checkpointNum <= checkpointSnapshots.Length -1)
 		{
+           // Debug.Log("Change Snapshot " + checkpointNum);
 			currentSnapShot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			currentSnapShot = FMODUnity.RuntimeManager.CreateInstance(checkpointSnapshots[checkpointNum]);
 			currentSnapShot.start();
@@ -188,4 +205,10 @@ public class GameManager : MonoBehaviour {
 		loseScreen.SetActive(true);
 		pacMan.isPaused = true;
 	}
+
+    public void CheckpointZero() {
+
+        checkpointNum = 0;
+
+    }
 }
